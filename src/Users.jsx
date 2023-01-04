@@ -1,7 +1,7 @@
 import User from "./User";
 import PropTypes from 'prop-types';
 
-const Users = ({ users }) => {
+const Users = ({ users, children }) => {
     return (
         <>
             {
@@ -9,6 +9,7 @@ const Users = ({ users }) => {
                     return <User ime={user.ime} prezime={user.prezime} dob={user.dob} />
                 })
             }
+            <p>{children}</p>
         </>
     )
 }

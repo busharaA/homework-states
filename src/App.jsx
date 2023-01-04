@@ -5,7 +5,7 @@ import Users from "./Users";
 class App extends Component
 {
     state = {
-        text: "Svi korisnici",
+        children: "Svi korisnici",
         korisnici: [
             {
                 ime: 'Branko',
@@ -26,10 +26,12 @@ class App extends Component
     };
 
     render() {
-        const { korisnici } = this.state;
+        const { korisnici, children } = this.state;
         return (
             <>
-                <Users users={korisnici} />
+                <Users users={korisnici}>
+                    {children}
+                </Users>
             </>
         );
     }
